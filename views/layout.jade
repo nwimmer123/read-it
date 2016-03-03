@@ -1,10 +1,25 @@
 doctype html
 html
   head
-    title= title
+    title= ReadIt
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    <!-- STYLESHEETS -->
     link(href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet', media='screen')
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+    <!-- VENDOR SCRIPTS -->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+
+    <!-- FONTS -->
+    link(href='https://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css')
+
+    <!-- handlebars -->
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js")
+
+    <!-- APPLICATION SCRIPTS -->
+    script(src="javascripts/app.js")
   body
     block content
 
