@@ -5,13 +5,15 @@ block content
     div(class="top container")
       h1 Welcome to Read It!
       h2 Book reviews and discussion
-    if (!user)
-      a(href="/login") Login
-      br
-      a(href="/register") Register
-    if (user)
-      p You are currently logged in as #{user.username}
-      a(href="/logout") Logout
+    //- if (!user)
+    //-   a(href="/login") Login
+    //-   br
+    //-   a(href="/register") Register
+    //-   br
+    //-   p To Add Books and Reviews, please LogIn!
+    //- if (user)
+    //-   p You are currently logged in as #{user.username}
+    //-   a(href="/logout") Logout
 
     <!-- Button trigger modal -->
     if (user)
