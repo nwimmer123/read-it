@@ -16,11 +16,13 @@ a {
     opacity: 0.8;
 }
 
-li {
+/*li {
   margin: 20px;
-    border-radius: 10px;
-    font-size: large;
-}
+  border-radius: 10px;
+  font-size: large;
+}*/
+
+
 
 #editEntry {
   margin-left: 15px;

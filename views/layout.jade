@@ -34,16 +34,15 @@ html
 
           ul(class="nav navbar-nav navbar-right nav-pills")
             if (!user)
-              a(href="/login") Login
-              br
-              a(href="/register") Sign Up
-              br
-             
+              li 
+                a(href="/login") Login
+              li
+                a(href="/register") Sign Up
             if (user)
-              p You are currently logged in as #{user.username}
-              a(href="/logout") Logout
+              li
+                a(href="/logout") Logout
        if (!user)
-        p To Add Books and Reviews, please Login!
+        p(class="text-center") To Add Books and Reviews, please Login!
 
     block content
 
