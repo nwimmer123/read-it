@@ -14,5 +14,6 @@ block content
       a(href="/logout") Logout
 
     <!-- Button trigger modal -->
-    div(class="container clearfix")
-      button(type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal" id="addBook") Add Book
+    if (user)
+      div(class="container clearfix")
+        button(type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal" id="addBook") Add Book

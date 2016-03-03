@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 //heroku connection
 // mongoose.connect( process.env.MONGOLAB_URI ||
 //                   process.env.MONGOHQ_URL ||
-//                   "mongodb://localhost/project-01_test" );
+//                   "mongodb://localhost/read-it_test" );
 
 var Book = require('./book');
 var Review = require('./review');
