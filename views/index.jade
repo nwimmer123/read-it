@@ -5,17 +5,65 @@ block content
     div(class="top container")
       h1 Welcome to Read It!
       h2 Book reviews and discussion
-    //- if (!user)
-    //-   a(href="/login") Login
-    //-   br
-    //-   a(href="/register") Register
-    //-   br
-    //-   p To Add Books and Reviews, please LogIn!
-    //- if (user)
-    //-   p You are currently logged in as #{user.username}
-    //-   a(href="/logout") Logout
 
     <!-- Button trigger modal -->
     if (user)
       div(class="container clearfix")
         button(type="button" class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal" id="addBook") Add Book
+
+    <!-- Modal -->
+    div(class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+      div(class="modal-dialog" role="document")
+        div(class="modal-content")
+          div(class="modal-header")
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true")&times;
+            h4(class="modal-title" id="myModalLabel") Add a Book
+  
+          
+          <!-- create book form -->
+          div(class="modal-body")
+            div(class ="addBookForm")
+              form(id="createBook")
+                div(class="form-group")
+                  input(type="text" class="form-control" name="contributor" id = "contributor" placeholder="Contributor")
+
+                div(class="form-group")
+                  input(type="text" class="form-control" name="title" id ="title" placeholder="Title")
+     
+                div(class="form-group")
+                  input(type="text" class="form-control" name="author" id="author" placeholder="Author")
+
+                select(name="genre" class="form-control" id="genre")
+                  option(value="Sci-Fi") Sci-Fi
+                  option(value="Fantasy") Fantasy
+                  option(value="Comics") Comics
+                  option(value="Graphic Novel") Graphic Novel
+                  option(value="Manga") Manga
+                  option(value="Drama") Drama
+                  option(value="Nonfiction") Nonfiction
+                  option(value="Mystery") Mystery
+                  option(value="Horror") Horror
+                  option(value="Anthology") Anthology
+                  option(value="Biographies") Biographies
+                  option(value="Autobiographies") Autobiographies
+
+                br
+                div(class="form-group")
+                  input(type="text" class="form-control" name="publisher" id="publisher" placeholder="Publisher")
+        
+                div(class="form-group")
+                  input(type="text" class="form-control" name="publicationDate" id="publicationDate" placeholder="Publication Date")
+              
+                div(class="form-group")
+                  input(type="text" class="form-control" name="synopsis" id="synopsis" placeholder="Synopsis")
+              
+                div(class="form-group")
+                  input(type="text" class="form-control" name="image" id="image" placeholder="Image Url")
+   
+          
+          <!-- create book modals buttons -->
+          div(class="modal-footer")
+            button(type="button" class="btn btn-default" data-dismiss="modal") Close
+            button(type="submit" class="btn btn-primary" id="createBookButton") CREATE BOOK
+ 
