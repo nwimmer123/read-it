@@ -20,20 +20,16 @@ block content
               span(aria-hidden="true")&times;
             h4(class="modal-title" id="myModalLabel") Add a Book
   
-          
           <!-- create book form -->
           div(class="modal-body")
             div(class ="addBookForm")
               form(id="createBook")
                 div(class="form-group")
-                  input(type="text" class="form-control" name="contributor" id = "contributor" placeholder="Contributor")
-
+                  input(type="hidden" class="form-control" name="contributor" id = "contributor" placeholder="Contributor")
                 div(class="form-group")
                   input(type="text" class="form-control" name="title" id ="title" placeholder="Title")
-     
                 div(class="form-group")
                   input(type="text" class="form-control" name="author" id="author" placeholder="Author")
-
                 select(name="genre" class="form-control" id="genre")
                   option(value="Sci-Fi") Sci-Fi
                   option(value="Fantasy") Fantasy
@@ -47,23 +43,36 @@ block content
                   option(value="Anthology") Anthology
                   option(value="Biographies") Biographies
                   option(value="Autobiographies") Autobiographies
-
                 br
                 div(class="form-group")
                   input(type="text" class="form-control" name="publisher" id="publisher" placeholder="Publisher")
-        
                 div(class="form-group")
                   input(type="text" class="form-control" name="publicationDate" id="publicationDate" placeholder="Publication Date")
-              
                 div(class="form-group")
                   input(type="text" class="form-control" name="synopsis" id="synopsis" placeholder="Synopsis")
-              
                 div(class="form-group")
                   input(type="text" class="form-control" name="image" id="image" placeholder="Image Url")
-   
-          
           <!-- create book modals buttons -->
           div(class="modal-footer")
             button(type="button" class="btn btn-default" data-dismiss="modal") Close
             button(type="submit" class="btn btn-primary" id="createBookButton") CREATE BOOK
+
+    //-               <!--Book List Display -->
+    //- div(class="lowerPage")
+    //-   ul(class="list-group" id="books-list")
+    //-     script(id="books-template" type="text/x-handlebars-template")
+    //-       {{#each books}}
+    //-         li(class="list-group-item book" data-id="{{_id}}")
+    //-           img(src={{image}} alt="Book Jacket" class="homepageImages")
+    //-           p
+    //-             b Contributor: {{contributor}}
+    //-           p
+    //-             b Title: {{title}}
+    //-           p
+    //-             b Author: {{author}}
+    //-           p
+    //-             b Genre: {{genre}}
+
+    //-         {{/each}}
+
  
