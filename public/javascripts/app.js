@@ -4,9 +4,18 @@ $(document).ready(function() {
 
   var baseUrl = '/api/books';
 
-  //addBook button actions
-
+  //handlebars set up
+  var source = $('#books-template').html();
+  var template = Handlebars.compile(source);
   
+  //get all database items
+  $.get(baseUrl, function (data) {
+    var dataHtml = template({ books: data});
+    $("#books-list").append(dataHtml);
+    console.log("other get!!");
+  });
+
+  //addBook button actions
   $("#addBook").on('click', function(e) {
     e.preventDefault();
 
@@ -39,4 +48,4 @@ $(document).ready(function() {
 
 
 
- });
+});
