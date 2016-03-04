@@ -7,8 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;var routes = require('./routes/index');
-var html = require('html');
-var hbs = require('hbs');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -80,6 +78,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
+<<<<<<< HEAD
 /**********
  * ROUTES *
  **********/
@@ -175,12 +174,14 @@ var db = require('./models');
 var User = require('./models/account');
 var Review = require('./models/review');
 
+=======
+>>>>>>> parent of d4baed6... added seed
 /**********
  * SERVER *
  **********/
 
-// // listen on port 3000
-// app.listen(process.env.PORT || 3000, function () {
-//   console.log('Express server is running on http://localhost:3000/');
-// });
+// listen on port 3000
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Express server is running on http://localhost:3000/');
+});
 

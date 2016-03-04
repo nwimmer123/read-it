@@ -4,7 +4,7 @@
   "description": "share books and recommendations",
   "main": "app.js",
   "author": "Noah Wimmer",
-  "license": "ISC",
+  "license": "ISC"
   "scripts": {
     "start": "node ./bin/www",
 
@@ -43,6 +43,6 @@
     "serve-favicon": "^2.2.0",
     "session-mongoose": "^0.5.2",
     "should": "~2.1.0"
-  }
+  },
 
 }
